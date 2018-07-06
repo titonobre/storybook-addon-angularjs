@@ -1,0 +1,30 @@
+{
+  "name": "storybook-addon-angularjs-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [
+    "storybook",
+    "angularjs",
+    "example"
+  ],
+  "author": "Tito Nobre",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.7.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "4.0.0-alpha.14",
+    "@storybook/addon-knobs": "4.0.0-alpha.14",
+    "@storybook/html": "4.0.0-alpha.14",
+    "babel-core": "6.26.3",
+    "babel-runtime": "6.26.0",
+    "storybook-addon-angularjs": "titonobre/storybook-addon-angularjs#5220949",
+    "moment": "2.22.2"
+  }
+}
