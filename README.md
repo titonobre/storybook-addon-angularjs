@@ -1,5 +1,8 @@
 # Storybook Addon for AngularJS
 
+> **Note**  
+> This is under active development. A first stable release is expected in the near future.
+
 ## Usage 
 
 Install the package:
