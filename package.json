@@ -9,6 +9,7 @@
   ],
   "author": "Tito Nobre",
   "license": "MIT",
+  "repository": "github:titonobre/storybook-addon-angularjs",
   "peerDependencies": {
     "angular": "1.x"
   }
