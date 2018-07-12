@@ -1,6 +1,9 @@
-# storybook-addon-angularjs-example
+# Storybook Addon for AngularJS Example
 
-## How to?
+> **Note**  
+> This is an usage example for the [`storybook-addon-angularjs`](https://github.com/titonobre/storybook-addon-angularjs).
+
+## How to run the example?
 
 1. `npm install`
 2. `npm run storybook`
