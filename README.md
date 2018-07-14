@@ -13,21 +13,29 @@ npm i -D storybook-addon-angularjs
 Create your stories with:
 
 ```js
+import { storiesOf } from "@storybook/html";
+
+import { withKnobs, text, number } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
+
 import { forModule } from "storybook-addon-angularjs";
 
-const myApp = forModule("myApp");
-
-const demoComponent = myApp.createElement(
-  `<demo-component foo="foo"></demo-component>`
-);
-
-storiesOf("AngularJS", module)
+storiesOf("Components/Demo", module)
   .addDecorator(withKnobs)
-  .add("demo-component", () => {
-    const foo = text("Foo", "Bar");
+  .add(
+    "default",
+    forModule("myApp").createElement(compile => {
+      const name = text("Name", "Jane");
 
-    return myApp.updateElement(demoComponent, { foo });
-  })
+      const foo = {
+        bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 })
+      };
+
+      const onEvt = action("clicked");
+
+      return compile`<demo-component name="${name}" foo="${foo}" on-ev="${onEvt}(num, name)"></demo-component>`;
+    })
+  );
 ```
 
 See a full working example [here](https://github.com/titonobre/storybook-addon-angularjs-example).
