@@ -5,40 +5,34 @@ import { action } from "@storybook/addon-actions";
 
 import { forModule } from "storybook-addon-angularjs";
 
-const myApp = forModule("myApp");
-
-const demoComponent = myApp.createElement(
-  `<demo-component name="name" foo="foo" on-ev="onEvt(num, name)"></demo-component>`
-);
-
-const otherComponent = myApp.createElement(
-  `<other-component title="title" things="things" on-hit="onHit(item)"></other-component>`
-);
-
-storiesOf("AngularJS", module)
+storiesOf("Components/Demo", module)
   .addDecorator(withKnobs)
-  .add("demo-component", () => {
-    const name = text("Name", "Jane");
+  .add(
+    "default",
+    forModule("myApp").createElement(compile => {
+      const name = text("Name", "Jane");
 
-    const value = number("Value", 20, {
-      range: true,
-      min: 0,
-      max: 30,
-      step: 1
-    });
+      const foo = {
+        bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 })
+      };
 
-    const foo = { bar: value };
+      const onEvt = action("clicked");
 
-    const onEvt = action("clicked");
+      return compile`<demo-component name="${name}" foo="${foo}" on-ev="${onEvt}(num, name)"></demo-component>`;
+    })
+  );
 
-    return myApp.updateElement(demoComponent, { name, foo, onEvt });
-  })
-  .add("other-component", () => {
-    const title = text("Title", "Some Title");
+storiesOf("Components/Other", module)
+  .addDecorator(withKnobs)
+  .add(
+    "default",
+    forModule("myApp").createElement(compile => {
+      const title = text("Title", "Some Title");
 
-    const things = array("Things", ["a", "b", "c"], ",");
+      const things = array("Things", ["a", "b", "c"], ",");
 
-    const onHit = action("hit");
+      const onHit = action("hit");
 
-    return myApp.updateElement(otherComponent, { title, things, onHit });
-  });
+      return compile`<other-component title="${title}" things="${things}" on-hit="${onHit}(item)"></other-component>`;
+    })
+  );
