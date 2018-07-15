@@ -3,6 +3,9 @@
 > **Note**  
 > This is under active development. A first stable release is expected in the near future.
 
+> **Note 2**  
+> This addon is intended to be used with `@storybook/html`, which is set to be released soon.
+
 ## Usage 
 
 Install the package:
