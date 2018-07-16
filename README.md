@@ -1,4 +1,4 @@
-# Storybook Addon for AngularJS
+# Storybook Addon for AngularJS (1.x)
 
 > **Note**  
 > This is under active development. A first stable release is expected in the near future.
