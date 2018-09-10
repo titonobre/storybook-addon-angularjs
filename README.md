@@ -41,4 +41,32 @@ storiesOf("Components/Demo", module)
   );
 ```
 
+or if you need to define any dependencies for your component:
+
+```js
+import { storiesOf } from "@storybook/html";
+
+import { withKnobs, text, number } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
+
+import { forModule } from "storybook-addon-angularjs";
+
+storiesOf("Components/Demo", module)
+  .addDecorator(withKnobs)
+  .add(
+    "default",
+    forModule(["ngMaterial", "myApp"]).createElement(compile => {
+      const name = text("Name", "Jane");
+
+      const foo = {
+        bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 })
+      };
+
+      const onEvt = action("clicked");
+
+      return compile`<demo-component name="${name}" foo="${foo}" on-ev="${onEvt}(num, name)"></demo-component>`;
+    })
+  );
+```
+
 See a full working example [here](https://github.com/titonobre/storybook-addon-angularjs-example).
