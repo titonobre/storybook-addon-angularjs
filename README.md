@@ -1,12 +1,9 @@
 # Storybook Addon for AngularJS (1.x)
 
-> **Note**  
-> This is under active development. A first stable release is expected in the near future.
+> **Note**
+> This addon is intended to be used with `@storybook/html`, available with Storybook 4.
 
-> **Note 2**  
-> This addon is intended to be used with `@storybook/html`, which is set to be released soon.
-
-## Usage 
+## Usage
 
 Install the package:
 ```bash
