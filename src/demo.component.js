@@ -4,12 +4,17 @@ const component = {
   template: `
       <h1>It works {{$ctrl.name}}</h1>
       <div>{{$ctrl.foo.bar}}</div>
-      <button ng-click=$ctrl.onClick()>Hit Me!</button>
-    `,
+      <ul>
+        <li ng-repeat="item in $ctrl.things">
+          <button ng-click="$ctrl.onClick(item)">{{item}}</button>
+        </li>
+      </ul>
+  `,
   bindings: {
     name: "<",
     foo: "<",
-    onEv: "&"
+    things: "<",
+    onEvent: "&"
   },
   controller: class {
     $onInit() {
@@ -20,9 +25,9 @@ const component = {
       console.log("$onChanges", changes);
     }
 
-    onClick() {
-      console.log("onClick", this);
-      this.onEv({ num: this.foo.bar, name: this.name });
+    onClick(item) {
+      console.log("onClick", item);
+      this.onEvent({ item });
     }
   }
 };

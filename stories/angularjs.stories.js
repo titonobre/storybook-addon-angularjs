@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 
 import { forModule } from "storybook-addon-angularjs";
 
-storiesOf("Components/Demo", module)
+storiesOf("Demo Component", module)
   .addDecorator(withKnobs)
   .add(
     "default",
@@ -16,23 +16,10 @@ storiesOf("Components/Demo", module)
         bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 })
       };
 
-      const onEvt = action("clicked");
-
-      return compile`<demo-component name="${name}" foo="${foo}" on-ev="${onEvt}(num, name)"></demo-component>`;
-    })
-  );
-
-storiesOf("Components/Other", module)
-  .addDecorator(withKnobs)
-  .add(
-    "default",
-    forModule("myApp").createElement(compile => {
-      const title = text("Title", "Some Title");
-
       const things = array("Things", ["a", "b", "c"], ",");
 
-      const onHit = action("hit");
+      const onEvt = action("clicked");
 
-      return compile`<other-component title="${title}" things="${things}" on-hit="${onHit}(item)"></other-component>`;
+      return compile`<demo-component name="${name}" foo="${foo}" things="${things}" on-event="${onEvt}(item)"></demo-component>`;
     })
   );
