@@ -1,7 +1,7 @@
 # Storybook Addon for AngularJS (1.x)
 
 > **Note**
-> This addon is intended to be used with `@storybook/html`, available with Storybook 4.
+> This addon is intended to be used with `@storybook/html`, available since Storybook 4.
 
 ## Usage
 
