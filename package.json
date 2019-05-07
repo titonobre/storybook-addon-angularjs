@@ -21,9 +21,9 @@
   "devDependencies": {
     "@babel/core": "7.4.4",
     "@babel/runtime": "7.4.4",
-    "@storybook/addon-actions": "4.1.18",
-    "@storybook/addon-knobs": "4.1.18",
-    "@storybook/html": "4.1.18",
+    "@storybook/addon-actions": "5.0.11",
+    "@storybook/addon-knobs": "5.0.11",
+    "@storybook/html": "5.0.11",
     "babel-loader": "8.0.5",
     "moment": "2.24.0",
     "storybook-addon-angularjs": "0.0.2"
