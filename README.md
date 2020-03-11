@@ -1,10 +1,10 @@
 # Storybook Addon for AngularJS (1.x)
 
-![npm](https://img.shields.io/npm/v/storybook-addon-angularjs.svg)
-![npm](https://img.shields.io/npm/dt/storybook-addon-angularjs.svg)
-![GitHub issues](https://img.shields.io/github/issues/titonobre/storybook-addon-angularjs.svg)
-![GitHub](https://img.shields.io/github/license/titonobre/storybook-addon-angularjs.svg)
-![Storybook](https://img.shields.io/badge/storybook-4%2B-ff4785.svg)
+[![npm](https://img.shields.io/npm/v/storybook-addon-angularjs.svg)](https://www.npmjs.com/package/storybook-addon-angularjs)
+[![npm](https://img.shields.io/npm/dt/storybook-addon-angularjs.svg)](https://www.npmjs.com/package/storybook-addon-angularjs)
+[![GitHub issues](https://img.shields.io/github/issues/titonobre/storybook-addon-angularjs.svg)](https://github.com/titonobre/storybook-addon-angularjs/issues)
+[![GitHub](https://img.shields.io/github/license/titonobre/storybook-addon-angularjs.svg)](https://github.com/titonobre/storybook-addon-angularjs/blob/master/LICENSE)
+[![Storybook](https://img.shields.io/badge/storybook-4%2B-ff4785.svg)](https://storybook.js.org/)
 
 > **Note**
 > This addon is intended to be used with `@storybook/html`, available since Storybook 4.
