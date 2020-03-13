@@ -54,7 +54,7 @@ storiesOf("Components/Demo", module)
   );
 ```
 
-See a full working example [here](https://github.com/titonobre/storybook-addon-angularjs-example).
+See a full working example in the [example subfolder](./example).
 
 ## License
 

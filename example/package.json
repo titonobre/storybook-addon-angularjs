@@ -26,6 +26,6 @@
     "@storybook/html": "5.3.14",
     "babel-loader": "8.0.6",
     "moment": "2.24.0",
-    "storybook-addon-angularjs": "0.0.2"
+    "storybook-addon-angularjs": "0.1.0"
   }
 }

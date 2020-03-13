@@ -5,7 +5,5 @@
 
 ## How to run the example?
 
-1. `npm install`
-2. `npm run storybook`
-3. ????
-4. PROFIT!!1
+1. `yarn`
+2. `yarn storybook`

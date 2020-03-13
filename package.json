@@ -1,16 +1,9 @@
 {
-  "name": "storybook-addon-angularjs",
-  "version": "0.1.0",
-  "description": "A simple addon to create Storybook stories with AngularJS components.",
-  "main": "lib/index.js",
-  "keywords": [
-    "storybook",
-    "angularjs"
-  ],
-  "author": "Tito Nobre",
-  "license": "MIT",
-  "repository": "github:titonobre/storybook-addon-angularjs",
-  "peerDependencies": {
-    "angular": "1.x"
-  }
+  "name": "storybook-addon-angularjs-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "lib",
+    "example"
+  ]
 }
