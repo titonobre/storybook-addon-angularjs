@@ -1,0 +1,39 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import { template as html, withAngularJs } from "storybook-addon-angularjs";
+
+<Meta title="Demos|MDX Demos" decorators={[withAngularJs("myApp")]} />
+
+# Storybook Addon for AngularJS
+
+This addon also supports the new MDX format, which is nice to write documentation about your components.
+
+You can write the stories right here in the Markdown file with a simple template
+
+<Preview>
+  <Story name="Simple Template" height="120px">
+    {`
+      <quote-card author="'Me'">
+        It works with a simple template!
+      </quote-card>
+    `}
+  </Story>
+</Preview>
+
+You can also provide the template and its properties
+
+<Preview>
+  <Story name="Template and Props" height="120px">
+    {{
+      template: `
+        <quote-card author="author">
+          {{content}}
+        </quote-card>
+      `,
+      props: {
+        content: "It works with template and props!",
+        author: "Me"
+      }
+    }}
+  </Story>
+</Preview>

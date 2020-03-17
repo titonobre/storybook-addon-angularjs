@@ -4,10 +4,13 @@ import { action } from "@storybook/addon-actions";
 import { forModule } from "storybook-addon-angularjs";
 
 export default {
-  title: "Demo Component",
+  title: "Legacy",
   decorators: [withKnobs]
 };
 
+/**
+ * The usage of `forModule` is now depreated. Please use the new decorator.
+ */
 export const Demo = forModule("myApp").createElement(compile => {
   const name = text("Name", "Jane");
   const someString = text("Some String", "It works too!");

@@ -20,15 +20,15 @@ const component = {
   },
   controller: class {
     $onInit() {
-      console.log("$onInit");
+      console.log("[Demo Component] $onInit");
     }
 
     $onChanges(changes) {
-      console.log("$onChanges", changes);
+      console.log("[Demo Component] $onChanges", changes);
     }
 
     onClick(item) {
-      console.log("onClick", item);
+      console.log("[Demo Component] onClick", item);
       this.onEvent({ item });
     }
   }
