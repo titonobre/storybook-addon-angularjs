@@ -5,5 +5,8 @@
   "workspaces": [
     "lib",
     "example"
-  ]
+  ],
+  "devDependencies": {
+    "lerna": "3.20.2"
+  }
 }
