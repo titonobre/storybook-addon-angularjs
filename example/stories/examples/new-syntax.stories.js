@@ -83,3 +83,41 @@ example2.story = {
   // adding the decorator with module name only
   decorators: [withAngularJs("myApp")]
 };
+
+/**
+ * Story with multiple modules.
+ */
+export const example3 = () => ({
+  template: `
+    <demo-component
+      name="name"
+      some-string="{{someString}}"
+      foo="foo"
+      things="things"
+      on-event="onEvt(item)">
+    </demo-component>
+    <quote-card
+      author="author"
+      on-click="onEvt(foo)">
+      {{content}}
+    </quote-cardauthor="author">
+  `,
+  props: {
+    content: text("Content", "It works with Knobs and Actions!", "quoteCard"),
+    author: text("Author", "Me", "quoteCard"),
+    things: array("Things", ["a", "b", "c"], ",", "DemoComponent"),
+    foo: {
+      bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 }, "DemoComponent")
+    },
+    name: text("Name", "Jane", "DemoComponent"),
+    someString: text("Some String", "It works too!",  "DemoComponent"),
+    onEvt: action("clicked")
+  }
+});
+
+example3.story = {
+  // adding the decorator with module name only
+  decorators: [
+    withAngularJs(["myApp.components.demo", "myApp.components.quoteCard"])
+  ]
+};
