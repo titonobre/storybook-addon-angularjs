@@ -113,6 +113,12 @@ This is a simple Quote Card:
 
 See these and more examples in the [example subfolder](./example).
 
+## API
+
+### `withAngularJs(module?: string | string[])`
+
+Storybook decorator. Can optionally be used to initialize the module(s) used within the story.
+
 ## License
 
 Use of this source code is governed by an MIT-style license that can be found in the [LICENSE](LICENSE) file.
