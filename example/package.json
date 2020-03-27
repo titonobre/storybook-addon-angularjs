@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-angularjs-example",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "@storybook/html": "5.3.17",
     "babel-loader": "8.0.6",
     "moment": "2.24.0",
-    "storybook-addon-angularjs": "1.0.0-alpha.0"
+    "storybook-addon-angularjs": "1.0.0"
   }
 }
