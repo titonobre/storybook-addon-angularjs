@@ -14,7 +14,7 @@ const component = {
   bindings: {
     content: "<",
     author: "<",
-    onClick: "&"
+    onClick: "&",
   },
   transclude: true,
   controller: class {
@@ -25,7 +25,7 @@ const component = {
     $onChanges(changes) {
       console.log("[Quote Card] $onChanges", changes);
     }
-  }
+  },
 };
 
 export default [componentName, component];

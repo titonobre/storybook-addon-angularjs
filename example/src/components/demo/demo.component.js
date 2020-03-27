@@ -16,7 +16,7 @@ const component = {
     someString: "@",
     foo: "<",
     things: "<",
-    onEvent: "&"
+    onEvent: "&",
   },
   controller: class {
     $onInit() {
@@ -31,7 +31,7 @@ const component = {
       console.log("[Demo Component] onClick", item);
       this.onEvent({ item });
     }
-  }
+  },
 };
 
 export default [componentName, component];

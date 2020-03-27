@@ -5,18 +5,18 @@ import { forModule } from "storybook-addon-angularjs";
 
 export default {
   title: "Legacy",
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
 /**
  * The usage of `forModule` is now depreated. Please use the new decorator.
  */
-export const Demo = forModule("myApp").createElement(compile => {
+export const Demo = forModule("myApp").createElement((compile) => {
   const name = text("Name", "Jane");
   const someString = text("Some String", "It works too!");
 
   const foo = {
-    bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 })
+    bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 }),
   };
 
   const things = array("Things", ["a", "b", "c"], ",");

@@ -5,7 +5,7 @@ import { template as html, withAngularJs } from "storybook-addon-angularjs";
 
 export default {
   title: "Demos|CSF Demos",
-  decorators: [withKnobs, withAngularJs("myApp")]
+  decorators: [withKnobs, withAngularJs("myApp")],
 };
 
 export const simpleTemplate = () => `
@@ -22,8 +22,8 @@ export const templateAndProps = () => ({
   `,
   props: {
     content: "It works with template and props!",
-    author: "Me"
-  }
+    author: "Me",
+  },
 });
 
 export const knobsAndActions = () => ({
@@ -35,15 +35,12 @@ export const knobsAndActions = () => ({
   props: {
     content: text("Content", "It works with Knobs and Actions!"),
     author: text("Author", "Me"),
-    onEvt: action("clicked")
-  }
+    onEvt: action("clicked"),
+  },
 });
 
 export const fancyTemplate = () => {
-  const content = text(
-    "Content",
-    "It works with a fancy tagged template string!"
-  );
+  const content = text("Content", "It works with a fancy tagged template string!");
   const author = text("Author", "Me");
   const onEvt = action("clicked");
 

@@ -7,9 +7,8 @@ module.exports = ({ config }) => {
       ...config.resolve,
       alias: {
         ...(config.resolve && config.resolve.alias),
-        angular: require.resolve("angular")
-
-      }
-    }
+        angular: require.resolve("angular"),
+      },
+    },
   };
 };

@@ -9,4 +9,3 @@ Check a live version here: https://storybook-addon-angularjs.now.sh/
 
 1. `yarn`
 2. `yarn storybook`
-

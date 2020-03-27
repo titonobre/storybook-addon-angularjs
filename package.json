@@ -6,7 +6,11 @@
     "lib",
     "example"
   ],
+  "scripts": {
+    "format:all-files": "prettier --write ."
+  },
   "devDependencies": {
-    "lerna": "3.20.2"
+    "lerna": "3.20.2",
+    "prettier": "2.0.2"
   }
 }

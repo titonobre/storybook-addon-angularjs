@@ -5,7 +5,7 @@ import { template as html, withAngularJs } from "storybook-addon-angularjs";
 
 export default {
   title: "New Syntax",
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
 /**
@@ -20,11 +20,7 @@ export const example1 = () => {
   const onClick = action("onClick");
 
   return html`
-    <example-component
-      value="${aValue}"
-      string="{{${aString}}}"
-      on-click="${onClick}(section)"
-    >
+    <example-component value="${aValue}" string="{{${aString}}}" on-click="${onClick}(section)">
       <slot-a>{{${slotA}}}</slot-a>
       <slot-b>
         <code>foo()</code>
@@ -49,10 +45,10 @@ example1.story = {
           console.log("[Story Hook] beforeUpdate, updating AppService message");
 
           AppService.message = "Ahoy!";
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 };
 
 /**
@@ -75,13 +71,13 @@ export const example2 = () => ({
     aValue: "Some text here!",
     aString: "This string will be interpolated...",
     onClick: action("onClick"),
-    slotA: "This will be transcluded into the component"
-  }
+    slotA: "This will be transcluded into the component",
+  },
 });
 
 example2.story = {
   // adding the decorator with module name only
-  decorators: [withAngularJs("myApp")]
+  decorators: [withAngularJs("myApp")],
 };
 
 /**
@@ -107,17 +103,15 @@ export const example3 = () => ({
     author: text("Author", "Me", "quoteCard"),
     things: array("Things", ["a", "b", "c"], ",", "DemoComponent"),
     foo: {
-      bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 }, "DemoComponent")
+      bar: number("Value", 20, { range: true, min: 0, max: 30, step: 1 }, "DemoComponent"),
     },
     name: text("Name", "Jane", "DemoComponent"),
-    someString: text("Some String", "It works too!",  "DemoComponent"),
-    onEvt: action("clicked")
-  }
+    someString: text("Some String", "It works too!", "DemoComponent"),
+    onEvt: action("clicked"),
+  },
 });
 
 example3.story = {
   // adding the decorator with module name only
-  decorators: [
-    withAngularJs(["myApp.components.demo", "myApp.components.quoteCard"])
-  ]
+  decorators: [withAngularJs(["myApp.components.demo", "myApp.components.quoteCard"])],
 };

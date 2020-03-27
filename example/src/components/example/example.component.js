@@ -31,11 +31,11 @@ const component = {
     value: "<",
     string: "@",
     items: "<",
-    onClick: "&"
+    onClick: "&",
   },
   transclude: {
     slotA: "?slotA",
-    slotB: "?slotB"
+    slotB: "?slotB",
   },
   controller: class {
     static $inject = ["AppService"];
@@ -56,7 +56,7 @@ const component = {
       console.log("[ExampleComponent] onClick in section", section);
       this.onClick({ section });
     }
-  }
+  },
 };
 
 export default [componentName, component];

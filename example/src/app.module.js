@@ -6,6 +6,4 @@ import quoteCard from "./components/quote-card";
 
 import appService from "./app.service";
 
-export default angular
-  .module("myApp", [demo.name, example.name, quoteCard.name])
-  .service(...appService);
+export default angular.module("myApp", [demo.name, example.name, quoteCard.name]).service(...appService);

@@ -34,7 +34,7 @@ Your stories can be as simple as this:
 ```js
 export default {
   title: "QuoteCard",
-  decorators: [withAngularJs("myApp")]
+  decorators: [withAngularJs("myApp")],
 };
 
 export const simpleTemplate = () => `
@@ -65,17 +65,14 @@ export default {
         beforeUpdate(SomeService) {
           // called before updating the component with new props
           SomeService.setValue("Hi!");
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 };
 
 export const fancyTemplate = () => {
-  const content = text(
-    "Content",
-    "It works with a fancy tagged template string!"
-  );
+  const content = text("Content", "It works with a fancy tagged template string!");
   const author = text("Author", "Me");
   const onEvt = action("clicked");
 
