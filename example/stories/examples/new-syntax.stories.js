@@ -1,7 +1,7 @@
 import { withKnobs, text, number, array } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import { template as html, withAngularJs } from "storybook-addon-angularjs";
+import { html, withAngularJs } from "storybook-addon-angularjs";
 
 export default {
   title: "New Syntax",
