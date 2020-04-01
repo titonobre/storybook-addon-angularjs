@@ -8,14 +8,14 @@ export default {
   decorators: [withKnobs, withAngularJs("myApp")],
 };
 
-export const simpleTemplate = () => `
+export const simpleTemplate = () => /* HTML */ `
   <quote-card author="'Me'">
     It works with a simple template!
   </quote-card>
 `;
 
 export const templateAndProps = () => ({
-  template: `
+  template: /* HTML */ `
     <quote-card author="author">
       {{content}}
     </quote-card>
@@ -27,7 +27,7 @@ export const templateAndProps = () => ({
 });
 
 export const knobsAndActions = () => ({
-  template: `
+  template: /* HTML */ `
     <quote-card author="author" on-click="onEvt(foo)">
       {{content}}
     </quote-card>

@@ -1,15 +1,15 @@
 const componentName = "demoComponent";
 
 const component = {
-  template: `
-      <h1>It works {{$ctrl.name}}</h1>
-      <div>{{$ctrl.someString}}</div>
-      <div>{{$ctrl.foo.bar}}</div>
-      <ul>
-        <li ng-repeat="item in $ctrl.things">
-          <button ng-click="$ctrl.onClick(item)">{{item}}</button>
-        </li>
-      </ul>
+  template: /* HTML */ `
+    <h1>It works {{$ctrl.name}}</h1>
+    <div>{{$ctrl.someString}}</div>
+    <div>{{$ctrl.foo.bar}}</div>
+    <ul>
+      <li ng-repeat="item in $ctrl.things">
+        <button ng-click="$ctrl.onClick(item)">{{item}}</button>
+      </li>
+    </ul>
   `,
   bindings: {
     name: "<",

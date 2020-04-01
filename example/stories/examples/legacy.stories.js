@@ -23,5 +23,11 @@ export const Demo = forModule("myApp").createElement((compile) => {
 
   const onEvt = action("clicked");
 
-  return compile`<demo-component name="${name}" some-string="{{${someString}}}" foo="${foo}" things="${things}" on-event="${onEvt}(item)"></demo-component>`;
+  return compile/* HTML */ `<demo-component
+    name="${name}"
+    some-string="{{${someString}}}"
+    foo="${foo}"
+    things="${things}"
+    on-event="${onEvt}(item)"
+  ></demo-component>`;
 });

@@ -3,7 +3,7 @@ import "./quote-card.css";
 const componentName = "quoteCard";
 
 const component = {
-  template: `
+  template: /* HTML */ `
     <blockquote class="card" ng-click="$ctrl.onClick({foo:'bar'})">
       <p class="content" ng-transclude></p>
       <cite>

@@ -55,12 +55,8 @@ example1.story = {
  * Story with template and props format.
  */
 export const example2 = () => ({
-  template: `
-    <example-component
-      value="aValue"
-      string="{{aString}}"
-      on-click="onClick(section)"
-    >
+  template: /* HTML */ `
+    <example-component value="aValue" string="{{aString}}" on-click="onClick(section)">
       <slot-a>{{slotA}}</slot-a>
       <slot-b>
         <code>foo()</code>
@@ -84,7 +80,7 @@ example2.story = {
  * Story with multiple modules.
  */
 export const example3 = () => ({
-  template: `
+  template: /* HTML */ `
     <demo-component
       name="name"
       some-string="{{someString}}"
