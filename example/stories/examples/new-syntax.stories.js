@@ -52,6 +52,50 @@ example1.story = {
 };
 
 /**
+ * This is basically the same as example1 but provides the module in the decorator rather
+ * than through the parameters
+ */
+export const example1_1 = () => {
+  const aValue = text("Value", "Some text here!");
+  const aString = text("String", "This string will be interpolated...");
+
+  const slotA = text("Slot A", "This will be transcluded into the component");
+
+  const onClick = action("onClick");
+
+  return html`
+    <example-component value="${aValue}" string="{{${aString}}}" on-click="${onClick}(section)">
+      <slot-a>{{${slotA}}}</slot-a>
+      <slot-b>
+        <code>foo()</code>
+      </slot-b>
+    </example-component>
+  `;
+};
+
+example1_1.story = {
+  // adding the decorator with its options passed on the parameters parameters
+  name: "Example 1.1",
+  decorators: [withAngularJs("myApp")],
+  parameters: {
+    ng: {
+      hooks: {
+        beforeCompile() {
+          // called once before compiling the the component
+          console.log("[Story Hook] beforeCompile");
+        },
+        beforeUpdate(AppService) {
+          // called before updating the component with new props
+          console.log("[Story Hook] beforeUpdate, updating AppService message");
+
+          AppService.message = "Ahoy!";
+        },
+      },
+    },
+  },
+};
+
+/**
  * Story with template and props format.
  */
 export const example2 = () => ({

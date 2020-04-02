@@ -54,10 +54,10 @@ import { html, withAngularJs } from "storybook-addon-angularjs";
 
 export default {
   title: "QuoteCard",
-  decorators: [withKnobs, withAngularJs],
+  decorators: [withKnobs, withAngularJs /* OR */ withAngularJs("myApp")],
   parameters: {
     ng: {
-      module: "myApp",
+      module: "myApp", // optional when provided in the decorator
       hooks: {
         beforeCompile() {
           // called once before compiling the the component
