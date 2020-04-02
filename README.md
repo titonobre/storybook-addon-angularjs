@@ -50,7 +50,7 @@ But you may choose something more advanced:
 import { withKnobs, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import { template as html, withAngularJs } from "storybook-addon-angularjs";
+import { html, withAngularJs } from "storybook-addon-angularjs";
 
 export default {
   title: "QuoteCard",
