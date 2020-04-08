@@ -2,7 +2,9 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import { template as html, withAngularJs } from "storybook-addon-angularjs";
 
-<Meta title="Demos|MDX Demos" decorators={[withAngularJs("myApp")]} />
+import myApp from "../../src/app.module";
+
+<Meta title="Demos|MDX Demos" decorators={[withAngularJs(myApp.name)]} />
 
 # Storybook Addon for AngularJS
 

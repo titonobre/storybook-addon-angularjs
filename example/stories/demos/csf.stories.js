@@ -3,9 +3,11 @@ import { action } from "@storybook/addon-actions";
 
 import { html, withAngularJs } from "storybook-addon-angularjs";
 
+import myApp from "../../src/app.module";
+
 export default {
   title: "Demos|CSF Demos",
-  decorators: [withKnobs, withAngularJs("myApp")],
+  decorators: [withKnobs, withAngularJs(myApp.name)],
 };
 
 export const simpleTemplate = () => /* HTML */ `

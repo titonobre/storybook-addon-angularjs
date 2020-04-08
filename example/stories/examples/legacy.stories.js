@@ -3,6 +3,8 @@ import { action } from "@storybook/addon-actions";
 
 import { forModule } from "storybook-addon-angularjs";
 
+import myApp from "../../src/app.module";
+
 export default {
   title: "Legacy",
   decorators: [withKnobs],
@@ -11,7 +13,7 @@ export default {
 /**
  * The usage of `forModule` is now depreated. Please use the new decorator.
  */
-export const Demo = forModule("myApp").createElement((compile) => {
+export const Demo = forModule(myApp.name).createElement((compile) => {
   const name = text("Name", "Jane");
   const someString = text("Some String", "It works too!");
 

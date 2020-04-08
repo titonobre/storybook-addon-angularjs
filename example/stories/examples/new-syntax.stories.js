@@ -3,6 +3,10 @@ import { action } from "@storybook/addon-actions";
 
 import { html, withAngularJs } from "storybook-addon-angularjs";
 
+import myApp from "../../src/app.module";
+import demoApp from "../../src/components/demo";
+import quoteApp from "../../src/components/quote-card";
+
 export default {
   title: "New Syntax",
   decorators: [withKnobs],
@@ -34,7 +38,7 @@ example1.story = {
   decorators: [withAngularJs],
   parameters: {
     ng: {
-      module: "myApp",
+      module: myApp.name,
       hooks: {
         beforeCompile() {
           // called once before compiling the the component
@@ -117,7 +121,7 @@ export const example2 = () => ({
 
 example2.story = {
   // adding the decorator with module name only
-  decorators: [withAngularJs("myApp")],
+  decorators: [withAngularJs(myApp.name)],
 };
 
 /**
@@ -153,5 +157,5 @@ export const example3 = () => ({
 
 example3.story = {
   // adding the decorator with module name only
-  decorators: [withAngularJs(["myApp.components.demo", "myApp.components.quoteCard"])],
+  decorators: [withAngularJs([demoApp.name, quoteApp.name])],
 };
