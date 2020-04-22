@@ -28,7 +28,7 @@ function MockedServiceFromFactory() {
   let counter = 0;
 
   return {
-    get counter(){
+    get counter() {
       return counter;
     },
     increaseCounter: () => {
