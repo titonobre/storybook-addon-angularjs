@@ -21,8 +21,8 @@ export default angular.module("myApp.mockTest", [myApp.name, "some.external.modu
 
     <h2>Mocked Service (from factory)</h2>
     <div>
-      <button ng-click="$ctrl.increaseFactoryCounter()">Increase Count</button>
-      <div>{{$ctrl.factoryCounter}}</div>
+      <button ng-click="$ctrl.mockedServiceFromFactory.increaseCounter()">Increase Count</button>
+      <div>{{$ctrl.mockedServiceFromFactory.counter}}</div>
     </div>
 
     <h2>Mocked Constant</h2>
@@ -36,12 +36,6 @@ export default angular.module("myApp.mockTest", [myApp.name, "some.external.modu
       this.mockedService = mockedService;
       this.mockedServiceFromFactory = mockedServiceFromFactory;
       this.MOCKED_CONSTANT = MOCKED_CONSTANT;
-
-      this.factoryCounter = 0;
-    }
-
-    increaseFactoryCounter() {
-      this.factoryCounter = this.mockedServiceFromFactory.increaseCounter();
     }
   },
 });
