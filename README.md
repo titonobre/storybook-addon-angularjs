@@ -52,6 +52,20 @@ import { action } from "@storybook/addon-actions";
 
 import { html, withAngularJs } from "storybook-addon-angularjs";
 
+class MockedAppService {
+  constructor() {
+    this.message = "Mocked message";
+  }
+}
+
+function mockLoggingService($log) {
+  return {
+    log: function(message) {
+      $log.log(message);
+    },
+  }
+}
+
 export default {
   title: "QuoteCard",
   decorators: [withKnobs, withAngularJs /* OR */ withAngularJs("myApp")],
@@ -67,6 +81,22 @@ export default {
           SomeService.setValue("Hi!");
         },
       },
+      mock: {
+        // When the app depends on modules which cannot be provided in the story you can mock them
+        modules: ["some.external.module"],
+        // You can mock / override constants here
+        constants: {
+          API_URL: "https://example.com",
+        },
+        // You can mock / override services here (dependency injection also works)
+        services: {
+          AppService: MockedAppService,
+        },
+        // You can mock / override factories here (dependency injection also works)
+        factories: {
+          LoggingService: mockLoggingService,
+        },
+      }
     },
   },
 };
