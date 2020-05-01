@@ -17,5 +17,6 @@
   "scripts": {
     "prepack": "cp ../README.md ../LICENSE ./",
     "postpack": "rm ./README.md ./LICENSE"
-  }
+  },
+  "types": "index.d.ts"
 }
