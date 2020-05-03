@@ -10,10 +10,10 @@
     "format:all-files": "prettier --write ."
   },
   "devDependencies": {
-    "husky": "^4.2.3",
-    "lerna": "3.20.2",
-    "lint-staged": "^10.1.1",
-    "prettier": "2.0.2"
+    "husky": "^4.2.5",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
   },
   "husky": {
     "hooks": {
