@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --quiet"
   },
   "keywords": [
     "storybook",
@@ -19,14 +19,17 @@
     "angular": "1.8.2"
   },
   "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/runtime": "7.9.6",
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/runtime": "7.12.5",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-docs": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
     "@storybook/addon-storysource": "5.3.18",
     "@storybook/html": "5.3.18",
-    "babel-loader": "8.1.0",
+    "babel-loader": "8.2.2",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "storybook-addon-angularjs": "1.3.0"
   }
 }
