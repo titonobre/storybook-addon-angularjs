@@ -146,6 +146,20 @@ See these and more examples in the [example subfolder](./example).
 
 Storybook decorator. Can optionally be used to initialize the module(s) used within the story.
 
+## Development
+
+Prepare your environment
+
+```sh
+npx lerna bootstrap
+```
+
+Build the Example Storybook
+
+```sh
+npx lerna bootstrap
+```
+
 ## License
 
 Use of this source code is governed by an MIT-style license that can be found in the [LICENSE](LICENSE) file.
