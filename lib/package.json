@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "github:titonobre/storybook-addon-angularjs",
   "peerDependencies": {
-    "@storybook/addons": "6.0.x",
+    "@storybook/addons": "6.1.x",
     "angular": "1.x"
   },
   "scripts": {
