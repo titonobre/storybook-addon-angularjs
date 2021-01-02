@@ -33,23 +33,21 @@ export const example1 = () => {
   `;
 };
 
-example1.story = {
-  // adding the decorator with its options passed on the parameters parameters
-  decorators: [withAngularJs],
-  parameters: {
-    ng: {
-      module: myApp.name,
-      hooks: {
-        beforeCompile() {
-          // called once before compiling the the component
-          console.log("[Story Hook] beforeCompile");
-        },
-        beforeUpdate(AppService) {
-          // called before updating the component with new props
-          console.log("[Story Hook] beforeUpdate, updating AppService message");
+example1.decorators = [withAngularJs];
 
-          AppService.message = "Ahoy!";
-        },
+example1.parameters = {
+  ng: {
+    module: myApp.name,
+    hooks: {
+      beforeCompile() {
+        // called once before compiling the the component
+        console.log("[Story Hook] beforeCompile");
+      },
+      beforeUpdate(AppService) {
+        // called before updating the component with new props
+        console.log("[Story Hook] beforeUpdate, updating AppService message");
+
+        AppService.message = "Ahoy!";
       },
     },
   },
@@ -77,23 +75,21 @@ export const example1_1 = () => {
   `;
 };
 
-example1_1.story = {
-  // adding the decorator with its options passed on the parameters parameters
-  name: "Example 1.1",
-  decorators: [withAngularJs("myApp")],
-  parameters: {
-    ng: {
-      hooks: {
-        beforeCompile() {
-          // called once before compiling the the component
-          console.log("[Story Hook] beforeCompile");
-        },
-        beforeUpdate(AppService) {
-          // called before updating the component with new props
-          console.log("[Story Hook] beforeUpdate, updating AppService message");
+example1_1.storyName = "Example 1.1";
+example1_1.decorators = [withAngularJs("myApp")];
 
-          AppService.message = "Ahoy!";
-        },
+example1_1.parameters = {
+  ng: {
+    hooks: {
+      beforeCompile() {
+        // called once before compiling the the component
+        console.log("[Story Hook] beforeCompile");
+      },
+      beforeUpdate(AppService) {
+        // called before updating the component with new props
+        console.log("[Story Hook] beforeUpdate, updating AppService message");
+
+        AppService.message = "Ahoy!";
       },
     },
   },
@@ -119,10 +115,7 @@ export const example2 = () => ({
   },
 });
 
-example2.story = {
-  // adding the decorator with module name only
-  decorators: [withAngularJs(myApp.name)],
-};
+example2.decorators = [withAngularJs(myApp.name)];
 
 /**
  * Story with multiple modules.
@@ -155,7 +148,4 @@ export const example3 = () => ({
   },
 });
 
-example3.story = {
-  // adding the decorator with module name only
-  decorators: [withAngularJs([demoApp.name, quoteApp.name])],
-};
+example3.decorators = [withAngularJs([demoApp.name, quoteApp.name])];

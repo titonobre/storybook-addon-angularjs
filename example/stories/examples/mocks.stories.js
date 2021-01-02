@@ -37,23 +37,22 @@ function MockedServiceFromFactory() {
   };
 }
 
-MockComponent.story = {
-  decorators: [withAngularJs(mockTestApp.name)],
-  parameters: {
-    ng: {
-      mock: {
-        // Add modules names which should be mocked
-        modules: ["some.external.module"],
-        // Services
-        services: {
-          MockedService,
-        },
-        factories: {
-          MockedServiceFromFactory,
-        },
-        constants: {
-          MOCKED_CONSTANT: "Mocked constant value",
-        },
+MockComponent.decorators = [withAngularJs(mockTestApp.name)];
+
+MockComponent.parameters = {
+  ng: {
+    mock: {
+      // Add modules names which should be mocked
+      modules: ["some.external.module"],
+      // Services
+      services: {
+        MockedService,
+      },
+      factories: {
+        MockedServiceFromFactory,
+      },
+      constants: {
+        MOCKED_CONSTANT: "Mocked constant value",
       },
     },
   },
