@@ -1,6 +1,6 @@
 import { html, withAngularJs } from "storybook-addon-angularjs";
 
-import myApp from "../src/app.module";
+import myApp from "../../src/app.module";
 
 export default {
   title: "Parameters/rebuild",

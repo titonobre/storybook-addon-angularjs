@@ -8,7 +8,7 @@ import demoApp from "../../src/components/demo";
 import quoteApp from "../../src/components/quote-card";
 
 export default {
-  title: "New Syntax",
+  title: "Syntax/New",
   decorators: [withKnobs],
 };
 

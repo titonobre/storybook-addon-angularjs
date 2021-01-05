@@ -6,7 +6,7 @@ import { forModule } from "storybook-addon-angularjs";
 import myApp from "../../src/app.module";
 
 export default {
-  title: "Legacy",
+  title: "Syntax/Legacy",
   decorators: [withKnobs],
 };
 

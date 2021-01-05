@@ -3,7 +3,7 @@ import { withAngularJs } from "storybook-addon-angularjs";
 import mockTestApp from "../../src/mock-test.module";
 
 export default {
-  title: "Mocks",
+  title: "Parameters/mock",
 };
 
 /**
