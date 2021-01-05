@@ -72,6 +72,7 @@ export default {
   parameters: {
     ng: {
       module: "myApp", // optional when provided in the decorator
+      rebuild: undefined, // optional, indicates when to rebuild the story. Can be "always", "mount" (when switching stories) or "update" (when updating knobs or controls)
       hooks: {
         beforeCompile() {
           // called once before compiling the the component
