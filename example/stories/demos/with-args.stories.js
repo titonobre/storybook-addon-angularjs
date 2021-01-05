@@ -4,13 +4,16 @@ import myApp from "../../src/app.module";
 
 export default {
   title: "Demos/CSF Demos 2",
-  decorators: [withAngularJs(myApp.name)],
+  decorators: [withAngularJs],
+  parameters: {
+    ng: {
+      module: myApp.name,
+    },
+  },
 };
 
 export const withArgs = ({ author, content, onEvt }) => html`
-  <quote-card author="${author}" on-click="${onEvt}(foo)">
-    {{${content}}}
-  </quote-card>
+  <quote-card author="${author}" on-click="${onEvt}(foo)">{{${content}}}</quote-card>
 `;
 
 withArgs.args = {
@@ -19,5 +22,5 @@ withArgs.args = {
 };
 
 withArgs.argTypes = {
-  onEvt: { action: "clicked" },
+  onEvt: { action: "clicked", table: { disable: true } },
 };
