@@ -4,7 +4,8 @@
   "private": true,
   "workspaces": [
     "lib",
-    "example"
+    "example",
+    "exampleWC"
   ],
   "scripts": {
     "format:all-files": "prettier --write ."
