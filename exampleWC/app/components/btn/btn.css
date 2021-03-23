@@ -1,0 +1,21 @@
+.btn {
+  background-color: blue;
+  color: yellow;
+}
+
+.btn:disabled {
+  background-color: lightgrey;
+  color: black;
+}
+
+.btn--medium {
+  padding: 8px;
+}
+
+.btn--large {
+  padding: 16px;
+}
+
+.btn--small {
+  padding: 4px;
+}

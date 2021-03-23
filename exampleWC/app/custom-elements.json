@@ -1,0 +1,62 @@
+{
+  "version": "2",
+  "tags": [
+    {
+      "name": "quote-card",
+      "description": "A Quote card.",
+      "properties": [
+        {
+          "name": "author",
+          "attribute": "author",
+          "description": "The author",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "on-click",
+          "description": "when clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "content",
+          "description": "This element has a slot"
+        }
+      ]
+    },
+    {
+      "name": "btn",
+      "description": "A button.",
+      "properties": [
+        {
+          "name": "content",
+          "attribute": "content",
+          "description": "The button's content",
+          "type": "string"
+        },
+        {
+          "name": "is-disabled",
+          "attribute": "is-disabled",
+          "description": "Whether the button is disabled",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The button's size",
+          "type": "small | medium | large",
+          "default": "medium"
+        }
+      ],
+      "events": [
+        {
+          "name": "on-click",
+          "description": "when clicked"
+        }
+      ],
+      "slots": []
+    }
+  ]
+}

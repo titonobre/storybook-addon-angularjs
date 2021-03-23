@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: #fff;
+  padding: 1em;
+  width: 25em;
+  color: rgba(14, 30, 37, 0.8);
+  font-family: serif;
+  font-size: 18px;
+}
+
+.card:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+  color: rgba(144, 144, 144, 0.13);
+  font-size: 5em;
+  content: '"';
+}
+
+.card .content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 1.8em;
+}
+
+.card cite {
+  display: flex;
+  justify-content: flex-end;
+  color: rgba(14, 30, 37, 0.54);
+  font-size: 0.8em;
+  font-style: normal;
+}
