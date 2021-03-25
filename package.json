@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "keywords": [
     "storybook",
-    "angularjs"
+    "angularjs",
+    "storybook-addon",
+    "code"
   ],
   "author": "Tito Nobre",
   "license": "MIT",
