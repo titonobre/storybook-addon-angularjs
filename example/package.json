@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-angularjs-example",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,6 @@
     "core-js": "^3.20.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "storybook-addon-angularjs": "^1.5.2"
+    "storybook-addon-angularjs": "^1.6.0"
   }
 }
